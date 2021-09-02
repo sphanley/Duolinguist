@@ -1,11 +1,13 @@
 """Constants for integration_blueprint."""
 # Base component constants
-NAME = "Integration blueprint"
-DOMAIN = "integration_blueprint"
+NAME = "Duolinguist"
+DOMAIN = "duolinguist"
 DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "0.0.1"
-ATTRIBUTION = "Data provided by http://jsonplaceholder.typicode.com/"
-ISSUE_URL = "https://github.com/custom-components/integration_blueprint/issues"
+ATTRIBUTION = (
+    "This integration is not affiliated with or approved by Duolingo in any way."
+)
+ISSUE_URL = "https://github.com/sphanley/duolinguist/issues"
 
 # Icons
 ICON = "mdi:format-quote-close"
@@ -15,9 +17,7 @@ BINARY_SENSOR_DEVICE_CLASS = "connectivity"
 
 # Platforms
 BINARY_SENSOR = "binary_sensor"
-SENSOR = "sensor"
-SWITCH = "switch"
-PLATFORMS = [BINARY_SENSOR, SENSOR, SWITCH]
+PLATFORMS = [BINARY_SENSOR]
 
 
 # Configuration and options
