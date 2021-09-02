@@ -1,10 +1,8 @@
 {
-    "name": "Integration blueprint",
+    "name": "Duolinguist",
     "hacs": "1.6.0",
     "domains": [
-        "binary_sensor",
-        "sensor",
-        "switch"
+        "binary_sensor"
     ],
     "homeassistant": "0.118.0"
 }
