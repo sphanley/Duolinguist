@@ -7,7 +7,7 @@ import requests
 import voluptuous as vol
 
 from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, BinarySensorEntity
-from homeassistant.const import CONF_USERNAME, CONF_PASSWORD, CONF_NAME
+from homeassistant.const import CONF_USERNAME, CONF_PASSWORD
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
 
@@ -29,23 +29,19 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 )
 
 
-def setup_platform(hass, config, add_entities, discovery_info=None):
-    """Set up the Duolingo sensor."""
-    name = config.get(CONF_USERNAME)
-    password = config.get(CONF_PASSWORD)
-
+async def async_setup_entry(hass, entry, async_add_devices):
+    """Setup binary_sensor platform."""
+    username = entry.data.get(CONF_USERNAME)
+    password = entry.data.get(CONF_PASSWORD)
     try:
-        duo_data = DuoData(name, password)
-        duo_data.update()
+        duo_data = DuoData(username, password)
+        await hass.async_add_executor_job(duo_data.update)
 
     except requests.exceptions.HTTPError as error:
         _LOGGER.error(error)
         return False
 
-    add_entities(
-        [DuolinguistBinarySensor(duo_data, name, password)],
-        True,
-    )
+    async_add_devices([DuolinguistBinarySensor(duo_data, username, password)])
 
 
 class DuolinguistBinarySensor(BinarySensorEntity):
