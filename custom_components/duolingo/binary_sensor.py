@@ -16,7 +16,6 @@ _LOGGER = logging.getLogger(__name__)
 ATTR_DUO_STREAK_LENGTH = "streak_length"
 ATTR_DUO_STREAK_EXTENDED_TODAY = "streak_extended_today"
 
-DEFAULT_NAME = "Duo"
 DEFAULT_DEVICE_CLASS = "visible"
 
 MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=900)

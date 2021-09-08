@@ -2,7 +2,6 @@
 import duolingo
 from homeassistant import config_entries
 from homeassistant.core import callback
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
 import voluptuous as vol
 
 from .const import (

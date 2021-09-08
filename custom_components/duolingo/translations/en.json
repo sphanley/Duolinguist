@@ -1,0 +1,14 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "username": "Username",
+                    "password": "Password"
+                },
+                "description": "Please enter your Duolingo username and password:"
+            }
+        }
+    },
+    "title": "Duolinguist"
+}

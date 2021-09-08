@@ -1,5 +1,5 @@
 {
-  "domain": "duolinguist",
+  "domain": "duolingo",
   "name": "Duolinguist",
   "documentation": "https://github.com/sphanley/duolinguist",
   "iot_class": "cloud_polling",

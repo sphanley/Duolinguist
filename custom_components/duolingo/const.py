@@ -1,7 +1,7 @@
 """Constants for integration_blueprint."""
 # Base component constants
 NAME = "Duolinguist"
-DOMAIN = "duolinguist"
+DOMAIN = "duolingo"
 DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "0.0.1"
 ATTRIBUTION = (
@@ -18,7 +18,6 @@ BINARY_SENSOR_DEVICE_CLASS = "connectivity"
 # Platforms
 BINARY_SENSOR = "binary_sensor"
 PLATFORMS = [BINARY_SENSOR]
-
 
 # Configuration and options
 CONF_ENABLED = "enabled"
