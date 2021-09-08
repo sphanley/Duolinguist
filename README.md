@@ -14,12 +14,11 @@ _Component to integrate with a Duolingo account, providing the status of your da
 4. Download _all_ the files from the `custom_components/duolinguist/` directory (folder) in this repository.
 5. Place the files you downloaded in the new directory (folder) you created.
 6. Restart Home Assistant
-<!-- 7. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Duolinguist" -->
-7. Continue to the Configuration section below to set up your integration.
+7. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Duolinguist".
 
 ## Configuration
 
-TODO: add configuration details
+This integration utilizes the UI configuration flow, and no YAML configuration is needed!
 
 ## Contributions are welcome!
 
