@@ -3,7 +3,7 @@ from homeassistant.exceptions import ConfigEntryNotReady
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-from custom_components.integration_blueprint import (
+from custom_components.duolingo import (
     BlueprintDataUpdateCoordinator,
     async_reload_entry,
     async_setup_entry,
