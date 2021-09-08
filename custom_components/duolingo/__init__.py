@@ -7,7 +7,7 @@ from homeassistant.core import HomeAssistant
 
 
 async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the Hello World component."""
+    """Set up the component."""
     # Ensure our name space for storing objects is a known type. A dict is
     # common/preferred as it allows a separate instance of your class for each
     # instance that has been created in the UI.
@@ -17,7 +17,7 @@ async def async_setup(hass: HomeAssistant, config: dict):
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Hello World from a config entry."""
+    """Set up component from a config entry."""
     # # Store an instance of the "connecting" class that does the work of speaking
     # # with your actual devices.
     # hass.data[DOMAIN][entry.entry_id] = hub.Hub(hass, entry.data["host"])
