@@ -5,7 +5,11 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/sphanley/duolinguist/issues",
   "version": "0.0.1",
-  "config_flow": false,
-  "codeowners": ["@sphanley"],
-  "requirements": ["duolingo-api==0.5.2"]
+  "config_flow": true,
+  "codeowners": [
+    "@sphanley"
+  ],
+  "requirements": [
+    "duolingo-api==0.5.2"
+  ]
 }
