@@ -3,7 +3,6 @@ import logging
 import asyncio
 import socket
 from typing import Optional
-import async_timeout
 import duolingo
 
 TIMEOUT = 10
