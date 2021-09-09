@@ -4,11 +4,11 @@ from homeassistant import config_entries
 from homeassistant.core import callback
 import voluptuous as vol
 
+from .api import DuolingoApiClient
 from .const import (
     CONF_PASSWORD,
     CONF_USERNAME,
     DOMAIN,
-    PLATFORMS,
 )
 
 
@@ -62,8 +62,9 @@ class DuolinguistFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     async def _test_credentials(self, username, password):
         """Return true if credentials is valid."""
         try:
+            client = DuolingoApiClient(username, password)
             await self.hass.async_add_executor_job(
-                duolingo.Duolingo, username, password
+                client.get_streak_data,
             )
 
             return True
