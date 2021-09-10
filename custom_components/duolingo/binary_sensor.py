@@ -13,8 +13,7 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
 
 from .const import (
-    BINARY_SENSOR,
-    DEFAULT_NAME,
+    CONF_USERNAME,
     DOMAIN,
 )
 
@@ -36,7 +35,7 @@ class DuolinguistBinarySensor(DuolingoEntity, BinarySensorEntity):
     @property
     def name(self):
         """Return the name of the binary_sensor."""
-        return f"{DEFAULT_NAME}_{BINARY_SENSOR}"
+        return f"{DOMAIN}_{self.coordinator.data.get(CONF_USERNAME)}"
 
     @property
     def is_on(self):

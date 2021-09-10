@@ -69,9 +69,12 @@ class DuolingoDataUpdateCoordinator(DataUpdateCoordinator):
     async def _async_update_data(self):
         """Update data via library."""
         try:
-            return await self.hass.async_add_executor_job(
+            data = await self.hass.async_add_executor_job(
                 self.api.get_streak_data,
             )
+            data[CONF_USERNAME] = self.api._username
+
+            return data
         except Exception as exception:
             raise UpdateFailed() from exception
 

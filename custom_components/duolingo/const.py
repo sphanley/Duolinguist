@@ -21,9 +21,6 @@ CONF_ENABLED = "enabled"
 CONF_USERNAME = "username"
 CONF_PASSWORD = "password"
 
-# Defaults
-DEFAULT_NAME = DOMAIN
-
 
 STARTUP_MESSAGE = f"""
 -------------------------------------------------------------------
