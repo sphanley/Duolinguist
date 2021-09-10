@@ -5,15 +5,12 @@ DOMAIN = "duolingo"
 DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "0.0.1"
 ATTRIBUTION = (
-    "This integration is not affiliated with or approved by Duolingo in any way."
+    "This integration is not affiliated with or endorsed by Duolingo, Inc. in any way."
 )
 ISSUE_URL = "https://github.com/sphanley/duolinguist/issues"
 
 # Icons
 ICON = "mdi:format-quote-close"
-
-# Device classes
-BINARY_SENSOR_DEVICE_CLASS = "connectivity"
 
 # Platforms
 BINARY_SENSOR = "binary_sensor"
